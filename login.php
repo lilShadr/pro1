@@ -13,7 +13,6 @@
             <div class="logo">PRO 1</div>
 
             <ul class="headerlinks">
-                <li><a href="movies.html">Movies</a></li>
                 <li><a href="index.html">Sign Up</a></li>
             </ul>
         </nav>
@@ -23,7 +22,7 @@
 
         <div class="formCon">
         <h1 class="headerForm">Log in</h1>    
-        <form action="" method="get" class="form-example">
+        <form action="movies.php" method="get" class="form-example">
             <div class="form">
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" required>

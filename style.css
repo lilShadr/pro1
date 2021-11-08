@@ -57,6 +57,7 @@ main{
 .headerForm{
     position: absolute;
     top: 300px;
+    font-size: 60px;
 }
 
 .form{

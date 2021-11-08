@@ -13,8 +13,7 @@
             <div class="logo">PRO 1</div>
 
             <ul class="headerlinks">
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="login.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
