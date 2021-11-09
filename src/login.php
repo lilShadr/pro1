@@ -13,7 +13,7 @@
             <div class="logo">PRO 1</div>
 
             <ul class="headerlinks">
-                <li><a href="index.html">Sign Up</a></li>
+                <li><a href="index.php">Sign Up</a></li>
             </ul>
         </nav>
     </header>

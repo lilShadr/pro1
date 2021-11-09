@@ -2,13 +2,8 @@
 
 $mysqli = new mysqli("db", "root", "example", "movies");
 
-$sql = "INSERT INTO users (name, fav_color) VALUES('Lucy', 'Yellow')";
-$result = $mysqli->query($sql);
-
-$sql = "INSERT INTO users (name, fav_color) VALUES('Nick', 'Red')";
-$result = $mysqli->query($sql);
-
-$sql = "INSERT INTO users (name, fav_color) VALUES('Mark', 'Blue')";
+$sql = "INSERT INTO users (userId, FirstName, LastName, Email, FavoriteMovie, Username, Password) VALUES ";
 $result = $mysqli->query($sql);
 
 ?>
+
