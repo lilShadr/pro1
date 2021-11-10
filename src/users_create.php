@@ -1,24 +1,16 @@
 <?php
-    require ("includes/conn_mysql.php");
-    require ("includes/user_functions.php");
 
 
+require ("includes/conn_mysql.php");
+require ("includes/user_functions.php");
 
-   $mysqli = new mysqli('db','root', 'example', 'movies') or die(mysqli_error($mysqli));
+$connection = dbConnect();
 
-    if (isset($_POST['save'])){
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
-        $email = $_POST['email'];
-        $favoritemovie = $_POST['favoritemovie'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-    }
+if(isset($_POST['isnew']) && $_POST['isnew'] == 1){
+    $saveUser = saveUser($connection);
 
-    $mysqli->query("INSERT INTO users (firstname, lastname, email, favoritemovie, username, password) VALUES ('$firstname', '$lastname', '$email', '$favoritemovie', '$username', '$password')") or die($mysqli->error);
-    
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

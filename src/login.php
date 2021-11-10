@@ -1,3 +1,23 @@
+<?php 
+
+    session_start();
+
+    require ("includes/conn_mysql.php");
+    require ("includes/user_functions.php");
+
+    $connection = dbConnect();
+
+    $mysqli = new mysqli('db','root', 'example', 'movies') or die(mysqli_error($mysqli));
+
+    if (isset($_POST['save'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    
+
+    /*$mysqli->query("INSERT INTO users (username, password) VALUES ('$username', '$password')") or die($mysqli->error);*/
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +28,13 @@
     <title>projekt1</title>
 </head>
 <body>
+
+<?php
+        if (isset($_GET['invalid_login'])) {
+            echo "Your username and password combination is invalid <br>";
+        }
+        ?>
+
     <header>
         <nav>
             <div class="logo">PRO 1</div>
@@ -22,13 +49,13 @@
 
         <div class="formCon">
         <h1 class="headerForm">Log in</h1>    
-        <form action="movies.php" method="get" class="form-example">
+        <form action="checklogin.php" method="post" class="form-example">
             <div class="form">
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" required>
             </div>
             <div class="form">
-            <label for="Password">Password: </label>
+            <label for="password">Password: </label>
             <input type="password" name="password" id="password" required>
             </div>
             <div class="form">

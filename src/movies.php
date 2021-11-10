@@ -13,18 +13,20 @@
             <div class="logo">PRO 1</div>
 
             <ul class="headerlinks">
-                <li><a href="login.php">Log Out</a></li>
+                <li><a href="logout.php">Log Out</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+    <h1>Du är inloggad! Välkommen!</h1>
+
         <form>
             Movie:
             <select>
               <option disabled selected>-- Select Movie --</option>
               <?php
-                  include "dbConn.php";  // Using database connection file here
+                  include "conn_mysql.php";  // Using database connection file here
                   $records = mysqli_query($db, "SELECT movie_name From tblmovies");  // Use select query here 
           
                   while($data = mysqli_fetch_array($records))
